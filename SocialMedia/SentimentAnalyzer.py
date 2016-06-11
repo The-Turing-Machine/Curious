@@ -8669,26 +8669,38 @@ data=[   {   'post_date': u'2016-06-11T15:54:48',
         'time': 1461237411,
         'user_profile_image': u'scontent.cdninstagram.com/t51.2885-19/s150x150/11296883_945210568870885_1542233124_a.jpg'}]
 
-# def sentiment_analysis():
+sentiment_analyzer_list=[]
 
-#     length_data=len(data)
+def SentimentAnalyser(text_query):
 
-    # for i in range(0,length_data):
-        # try:
-r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[1]['text'])
+            sentiment_anaylsis_dictionary={}
+
+            r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[1]['text'])
+
+            api_response=json.loads(r1.text)
+
+            aggregate=api_response['aggregate']
+
+            sentiment_anaylsis_dictionary['aggregate']=aggregate
+
+            keys=api_response.keys()
+
+            for i in range(1,3):
+
+                if (api_response[keys[i]] != []):
+                    sentiment_anaylsis_dictionary['response']=api_response[keys[i]]
+                else:
+                    pass
+
+            sentiment_analyzer_list.append(sentiment_anaylsis_dictionary)
+
+for i in range(0,len(data)):
+
+    text_query=data[i]['text']
+
+    language_dictionary['post_id']=data[i]['id']
+
+    SentimentAnalyser(text_query)
 
 
-api_response=json.loads(r1.text)
-#print api_response
-aggregate=api_response['aggregate']
-# print aggregate
 
-keys=api_response.keys()
-#print api_response[keys[1]]
-
-for i in range(1,3):
-
-    if (api_response[keys[i]] != []):
-        print api_response[keys[i]]
-    else:
-        pass

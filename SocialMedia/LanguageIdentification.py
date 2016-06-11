@@ -1,5 +1,6 @@
 import json
 import requests
+import pprint
 i=0
 
 
@@ -8669,25 +8670,43 @@ data=[   {   'post_date': u'2016-06-11T15:54:48',
         'time': 1461237411,
         'user_profile_image': u'scontent.cdninstagram.com/t51.2885-19/s150x150/11296883_945210568870885_1542233124_a.jpg'}]
 
-length_data=len(data)
+all_detected_languages=[]
 
-for i in range(0,length_data):
-    try:
-        r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[i]['text'])
+def LanguageIdentification(text_query):
 
-        all_post_data=json.loads(r1.text)
+        language_dictionary={}
 
-        job_id=all_post_data['jobID']
+        try:
+            r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
 
-        r2=requests.get('https://api.havenondemand.com/1/job/status/'+job_id+'?apikey=22469062-d90b-45bd-94c7-1399b139ba8f')
+            all_post_data=json.loads(r1.text)
 
-        api_response=json.loads(r2.text)
+            job_id=all_post_data['jobID']
 
-        detected_language=api_response['actions'][0]['result']['language']
-        print detected_language
+            r2=requests.get('https://api.havenondemand.com/1/job/status/'+job_id+'?apikey=22469062-d90b-45bd-94c7-1399b139ba8f')
 
-    except:
-        pass
+            api_response=json.loads(r2.text)
+
+            detected_language=api_response['actions'][0]['result']['language']
+
+            language_dictionary['language']=detected_language
+
+
+            all_detected_languages.append(language_dictionary)
+
+        except:
+            pass
+
+for i in range(0,len(data)):
+
+    text_query=data[i]['text']
+
+    #anguage_dictionary['post_id']=data[i]['id']
+
+    LanguageIdentification(text_query)
+
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(all_detected_languages)
 
 
 
