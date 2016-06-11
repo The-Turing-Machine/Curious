@@ -34,14 +34,18 @@ CONSUMER_SECRET = "JQ5E8Wn0XutYqslBdjGRJxi5snbh2bDmGAeq3mI8bXnmyYVVAn"
 # OAUTH_TOKEN_SECRET="2eAn9kfBofZpuFHuYaakbwbNqrpeesInMas1AAdkxQKb1"
 
 OAUTH_TOKEN= "4653955494-2z4klWrjEk8PhV1HCT9QFvibjPouDuj0z2YIQh6"
-OAUTH_TOKEN_SECRET=" Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw"
+OAUTH_TOKEN_SECRET="Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw"
 
 
 
 
 coun = ["Afghanistan","Argentina","Armenia","Australia","Austria","Bahrain","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Czech Republic","North Korea","Democratic Republic of the Cong","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Republic of Korea (South Korea)","Republic of Moldova","Romania","Russian Federation","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syrian Arab Republic","Tajikistan","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom of Great Britain and Northern Ireland","United Republic of Tanzania","United States of America","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"]
 
-woeid=['23424740', '23424747', '23424748', '23424750', '23424978', '23424774', '23424794', '23424776', '23424785', '23424775', '23424792', '837054', '23424782', '23424971', '23424787', '23424786', '23424779', '879050', '23424843', '23424793', '26812346', '23424810', '23424868', '2480268', '23424796', '2345158', '23424798', '23424800', '23424801', '23424802', '23424807', '23424835', '23424806', '23424805', '23424808', '23424813', '23424812', '23424819', '1329894', '1259029', '2347569', '23424829', '23424824', '23424833', '2414888', '83123', '23424835', '1559861', '23424836', '23424839', '23424841', '23424844', '23424845', '23424848', '23424846', '23424851', '2124082', '23424803', '23424852', '23424853', '23424858', '23424856', '2429994', '23424871', '23424863', '23424867', '1940631', '23424864', '23424874', '2437673', '23424880', '23424876', '23424882', '23424879', '23424875', '979721', '2443718', '23424883', '23424889', '23424901', '23424899', '23424891', '23424897', '23424932', '23424896', '23424894', '23424900', '24865720', '483301', '23424887', '20069817', '23424893', '23424902', '23424763', '23424987', '23424912', '23424911', '23424909', '23424916', '23424906', '23424908', '29145317', '23424898', '23424922', '23424927', '159386', '12491802', '23424917', '23424919', '23424934', '23424923', '23424925', '28395013', '23424868', '23424885', '23424933', '23424936', '23424937', '23424940', '1325621', '2347676', '23424992', '532373', '1441680', '29125356', '23424943', '20069818', '23424941', '1062844', '1062617', '23424877', '23424945', '23424766', '23424949', '24865670', '23424952', '23424950', '12467072', '905958', '23424913', '23424993', '23424954', '23424957', '23424956', '23424961', '23424960', '23424968', '1048627', '23424964', '23424958', '23424967', '23424969', '23424972', '23424970', '1301134', '23424976', '23424738', '20070563', '23424973', '23424977', '23424979', '23424980', '23424907', '23424982', '23424984', '23425002', '23425003', '23425004']
+woeid = [u'23424740', u'23424747', u'23424748', u'23424750', u'23424775', u'23424782', u'23424787', u'23424868', u'23424796', u'23424800', u'23424801', u'23424802', u'23424819', u'23424829', u'23424824', u'23424833', u'83123', u'23424848', u'23424846', u'23424803', u'23424852', u'23424853', u'23424858', u'23424856', u'2429994', u'23424874', u'23424899', u'23424891', u'23424897', u'23424932', u'23424896', u'23424894', u'23424900', u'24865720', u'483301', u'23424887', u'20069817', u'23424893', u'23424902', u'23424763', u'23424987', u'23424912', u'23424911', u'23424909', u'23424916', u'23424906', u'23424908', u'29145317', u'23424898', u'23424922', u'23424927', u'159386', u'12491802', u'23424917', u'23424919', u'23424934', u'23424923', u'23424925', u'28395013', u'23424868', u'23424885', u'23424933', u'23424936', u'23424937', u'23424940', u'1325621', u'2347676', u'23424992', u'532373', u'1441680', u'29125356', u'23424943', u'20069818', u'23424941', u'1062844', u'1062617', u'23424877', u'23424945', u'23424766', u'23424949', u'24865670', u'23424952', u'23424950', u'12467072', u'905958', u'23424913', u'23424993', u'23424954', u'23424957', u'23424956', u'23424961', u'23424960', u'23424968', u'1048627', u'23424964', u'23424958', u'23424967', u'23424969', u'23424972', u'23424970', u'1301134', u'23424976', u'23424738', u'20070563', u'23424973', u'23424977', u'23424979', u'23424980', u'23424907', u'23424982', u'23424984', u'23425002', u'23425003', u'23425004']
+
+
+
+
 
 def setup_oauth():
     """Authorize your app via identifier."""
@@ -83,16 +87,20 @@ def get_oauth():
 
 dic = {}
 def get_trend_hashtags(woeid):
-        for i in woeid:
+        for i in woeid[25:]:
             # try:
             b = requests.get(url="https://api.twitter.com/1.1/trends/place.json?id="+i+"", auth=oauth)
-            print b.json()
+            # print b.json()
             tag =[]
             try:
 
-                print b.json()[0]['trends']
+                for j in b.json()[0]['trends']:
+                    print j["query"]
             except Exception as e:
+                woeid.remove(i)
                 print i
+                print woeid
+                print b.json()
 
             # for i in b.json()[0]:
             #     tag.append(i['trends']["query"])
@@ -117,7 +125,7 @@ if __name__ == "__main__":
         print
     else:
         oauth = get_oauth()
-        # get_trend_hashtags(woeid)
+        get_trend_hashtags(woeid)
         # r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
         # a = r.json()
         # print len(a)
@@ -130,6 +138,3 @@ if __name__ == "__main__":
             # print "tweet="+a['statuses'][1]['text']
             # print "place="+a['statuses'][1]['place']
         # pp.pprint(r.json())
-
-
-# [{u'created_at': u'2016-06-11T10:41:02Z', u'trends': [{u'url': u'http://twitter.com/search?q=%23%D8%A8%D8%B9%D8%AF_%D8%A7%D9%84%D9%81%D8%B7%D8%A7%D8%B1_%D8%A8%D8%AA%D8%B9%D9%85%D9%84_%D8%A7%D9%8A%D9%87', u'query': u'%23%D8%A8%D8%B9%D8%AF_%D8%A7%D9%84%D9%81%D8%B7%D8%A7%D8%B1_%D8%A8%D8%AA%D8%B9%D9%85%D9%84_%D8%A7%D9%8A%D9%87', u'tweet_volume': None, u'name': u'#\u0628\u0639\u062f_\u0627\u0644\u0641\u0637\u0627\u0631_\u0628\u062a\u0639\u0645\u0644_\u0627\u064a\u0647', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%A7%D9%83%D8%AA%D8%A8_%D8%AA%D9%88%D9%8A%D8%AA%D9%87_%D8%AD%D9%84%D9%88%D9%87', u'query': u'%23%D8%A7%D9%83%D8%AA%D8%A8_%D8%AA%D9%88%D9%8A%D8%AA%D9%87_%D8%AD%D9%84%D9%88%D9%87', u'tweet_volume': 33310, u'name': u'#\u0627\u0643\u062a\u0628_\u062a\u0648\u064a\u062a\u0647_\u062d\u0644\u0648\u0647', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86', u'query': u'%23%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86', u'tweet_volume': None, u'name': u'#\u0641\u0644\u0633\u0637\u064a\u0646', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%AF%D8%B9%D9%88%D9%87_%D8%AD%D8%A8', u'query': u'%23%D8%AF%D8%B9%D9%88%D9%87_%D8%AD%D8%A8', u'tweet_volume': 21448, u'name': u'#\u062f\u0639\u0648\u0647_\u062d\u0628', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%B3%D9%85%D8%B1%D9%82%D9%86%D8%AF', u'query': u'%23%D8%B3%D9%85%D8%B1%D9%82%D9%86%D8%AF', u'tweet_volume': None, u'name': u'#\u0633\u0645\u0631\u0642\u0646\u062f', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23HBDAnis', u'query': u'%23HBDAnis', u'tweet_volume': None, u'name': u'#HBDAnis', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D9%86%D8%B5_%D9%8A%D9%88%D9%85', u'query': u'%23%D9%86%D8%B5_%D9%8A%D9%88%D9%85', u'tweet_volume': None, u'name': u'#\u0646\u0635_\u064a\u0648\u0645', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%87', u'query': u'%23%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%87', u'tweet_volume': 101106, u'name': u'#\u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0647', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8', u'query': u'%23%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8', u'tweet_volume': None, u'name': u'#\u0627\u0644\u0645\u063a\u0631\u0628', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1', u'query': u'%23%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1', u'tweet_volume': None, u'name': u'#\u0627\u0644\u0645\u0634\u0627\u0647\u064a\u0631', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%AF%D8%A7%D8%B9%D8%B4', u'query': u'%23%D8%AF%D8%A7%D8%B9%D8%B4', u'tweet_volume': 28934, u'name': u'#\u062f\u0627\u0639\u0634', u'promoted_content': None}, {u'url': u'http://twitter.com/search?q=%23%D8%A7%D9%84%D8%AF%D9%85%D8%B9%D9%87_%D8%A7%D9%84%D8%AD%D9%85%D8%B1%D8%A7%D8%A1', u'query': u'%23%D8%A7%D9%84%D8%AF%D9%85%D8%B9%D9%87_%D8%A7%D9%84%D8%AD%D9%85%D8%B1%D8%A7%D8%A1', u'tweet_volume': None, u'name': u'#\u0627\u0644\u062f\u0645\u0639\u0647_\u0627\u0644\u062d\u0645\u0631\u0627\u0621', u'promoted_content': None}], u'as_of': u'2016-06-11T10:46:11Z', u'locations': [{u'woeid': 23424740, u'name': u'Algeria'}]}]
