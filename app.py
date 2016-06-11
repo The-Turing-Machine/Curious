@@ -3,8 +3,11 @@ import os
 import data as data
 import scheduler as s
 import threading
+from flask.ext.cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 class Thread (threading.Thread):
     def __init__(self):
@@ -27,4 +30,4 @@ def send_data():
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 5000))
-	app.run(threaded=True,host='0.0.0.0',port=port)
+	app.run(debug=True,threaded=True,host='0.0.0.0',port=port)

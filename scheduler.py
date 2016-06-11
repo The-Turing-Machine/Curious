@@ -1,7 +1,7 @@
 from gevent import monkey
 monkey.patch_all()
 
-import time
+import datetime
 import requests
 import gevent.pool
 import gevent.queue
@@ -54,7 +54,9 @@ def data_social_medias(hashtag):
             social_media_dictionary['social_media_network']=social_media_data['posts'][i]['network']
             social_media_dictionary['social_media_link']=social_media_data['posts'][i]['permalink']
             social_media_dictionary['user_profile_image']=social_media_data['posts'][i]['user_profile_image_url'].replace("//","")
-            social_media_dictionary['time']=social_media_data['posts'][i]['post_time']
+            epoch_time=social_media_data['posts'][i]['post_time']
+			real_time=datetime.datetime.fromtimestamp(epoch_time).strftime("%c")
+			social_media_dictionary['time']=real_time
             social_media_dictionary['post_date']=social_media_data['posts'][i]['post_date'][:-5]
             social_media_dictionary['real_user_name']=social_media_data['posts'][i]['user_real_name'].encode('ascii', errors='ignore')
             social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
@@ -78,5 +80,5 @@ def main():
             pool.start(pool.spawn(t[0],t[1]))
     pool.join()
 
-main()
-print 'No of Requests : ',req
+# main()
+# print 'No of Requests : ',req
