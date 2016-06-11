@@ -123,6 +123,11 @@ def get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET):
     print "chaneg agaib"
     return oauth
 
+def get_geoleoction(location):
+    geo =requests.get("https://maps.googleapis.com/maps/api/geocode/json?address="+location+"turkey&key=AIzaSyB9Q52N2J-zQEZD1woX6-4PAaH-nP6gPPo&callback=initMap")
+    d = geo.json()
+    print d['results'][0]['geometry']['location']
+
 dic = {}
 def get_trend_hashtags(woeid,oauth):
         c = 0
@@ -134,6 +139,7 @@ def get_trend_hashtags(woeid,oauth):
             try:
             # pp.pprint(b.json())
                 loc = b.json()[0]['locations'][0]["name"]
+                get_geoleoction(loc)
                 for k in b.json()[0]['trends'][0:10]:
 
                     new = []
