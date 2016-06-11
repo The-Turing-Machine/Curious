@@ -1,4 +1,4 @@
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, jsonify
 import os
 import data as data
 import scheduler as s
@@ -21,7 +21,9 @@ def homepage():
 
 @app.route('/data')
 def send_data():
-    return data.all_social_media_link
+    return jsonify({'data':data.all_social_media_link})
+
+    # return str(data.all_social_media_link)
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 5000))

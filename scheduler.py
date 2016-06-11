@@ -42,8 +42,8 @@ def data_social_medias(hashtag):
             social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
         except:
             pass
-        # data.all_social_media_link.append(social_media_dictionary)
-        data.all_social_media_link += str(social_media_dictionary)
+        data.all_social_media_link.append(social_media_dictionary)
+        # data.all_social_media_link += str(social_media_dictionary)
     print 'Recieved hashtag - ',hashtag
 
 
