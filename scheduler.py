@@ -18,12 +18,9 @@ hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub99
 'Panama','Giroud','Payet','Burundi','Monday+and+Thursday','BREAKING+NEWS','Chase+Bank','Governor+Nderitu+Gachagua','CS+Joseph+Nkaissery','Kidero','Nigeria','Wenger','Auditor+General','Ramadan','QwetuRoadShow','TourismLiveKE','SiganaFest2016','EURO2016','UhuruInUkambani','QTVJAMROCK','NBAFinals','FaithFriday','TwendeMacha','WBWR','MuhammadAli','NZLvWAL','TransformingCounties','HOTSMS',
 'EbruNewsUpdate','AlbinismKE']
 
-
-
-
 def data_social_medias(hashtag):
     print 'Requesting hashtag - ',hashtag
-    r=session.get("https://post-cache.tagboard.com/search/"+hashtag+"?excluded_networks=twitter&count=100")
+    r=session.get("https://post-cache.tagboard.com/search/"+hashtag+"?count=100")
 
     social_media_data=json.loads(r.text)
     no_of_posts=len(social_media_data['posts'])
@@ -40,6 +37,7 @@ def data_social_medias(hashtag):
             social_media_dictionary['real_user_name']=social_media_data['posts'][i]['user_real_name'].encode('ascii', errors='ignore')
             social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
             social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
+            social_media_dictionary['post_id']=social_media_data['id']
         except:
             pass
         data.all_social_media_link.append(social_media_dictionary)
