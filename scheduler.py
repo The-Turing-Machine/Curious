@@ -53,7 +53,7 @@ def data_social_medias(hashtag):
         # social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
 
         # print social_media_data['posts'][i]['photos']
-        print social_media_data['posts'][i]['videos']
+        # print social_media_data['posts'][i]['videos']
     	try:
             l = social_media_data['posts'][i]['photos'][0]
             social_media_dictionary['photos'] = [ x.replace("//","") for x in [ l['s'],l['m'],l['l'] ] ]
