@@ -133,22 +133,28 @@ def get_trend_hashtags(woeid,oauth):
             tag =[]
             try:
             # pp.pprint(b.json())
-                loc = b.json()[0]['locations']
-                for k in b.json()[0]['trends']:
+                loc = b.json()[0]['locations'][0]["name"]
+                for k in b.json()[0]['trends'][0:10]:
 
+                    new = []
                     vol = k['tweet_volume']
-                    print loc
-                    print vol
+                    # print loc
+                    # print vol
                     # print pp.pprint(b.json())
-                    tag.append(k['query'])
+                    new.append(k['query'])
+                    new.append(vol)
+                    tag.append(new)
+                    print new
+
+
 
                     # print k['query']
                 # print tag[0:10]
-                dic[i] = tag[0:10]
+                dic[loc] = tag
                 print dic
-            except:
+            except Exception as e:
                 pass
-                print "error"
+                print "error",e.message
                 # CONSUMER_KEY="9u8p3OjDgDvFjTQQQ5XYQqB8v"
                 # CONSUMER_SECRET = "sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"
                 # OAUTH_TOKEN =  "4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"
