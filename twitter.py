@@ -43,3 +43,12 @@ def setup_oauth():
     secret = credentials.get('oauth_token_secret')[0]
 
     return token, secret
+
+pp = pprint.PrettyPrinter(indent=4)
+
+def get_oauth():
+    oauth = OAuth1(CONSUMER_KEY,
+                client_secret=CONSUMER_SECRET,
+                resource_owner_key=OAUTH_TOKEN,
+                resource_owner_secret=OAUTH_TOKEN_SECRET)
+    return oauth
