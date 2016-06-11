@@ -63,3 +63,14 @@ if __name__ == "__main__":
     else:
         oauth = get_oauth()
         r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
+        a = r.json()
+        print len(a)
+        for i in range(0,100):
+
+            print "tweet="+a['statuses'][i]['text']
+            print "place="+str(a['statuses'][i]['place'])
+            print "coordibnates="+str(a['statuses'][i]['coordinates'])
+            # print a['statuses'][0]['text']
+            # print "tweet="+a['statuses'][1]['text']
+            # print "place="+a['statuses'][1]['place']
+        # pp.pprint(r.json())
