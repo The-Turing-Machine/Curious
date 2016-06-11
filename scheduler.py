@@ -1,3 +1,4 @@
+
 from gevent import monkey
 monkey.patch_all()
 
@@ -49,18 +50,26 @@ def data_social_medias(hashtag):
     for i in range(0,no_of_posts):
     	social_media_dictionary={}
         social_media_dictionary['post_id']=social_media_data['posts'][i]['post_id']
+        # social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
+
+        # print social_media_data['posts'][i]['photos']
+        print social_media_data['posts'][i]['videos']
     	try:
+            l = social_media_data['posts'][i]['photos'][0]
+            social_media_dictionary['photos'] = [ x.replace("//","") for x in [ l['s'],l['m'],l['l'] ] ]
+
+            l = social_media_data['posts'][i]['videos'][0]
+            social_media_dictionary['videos'] = [ x.replace("//","") for x in [ l['t'],l['p'],l['s'],l['m'] ] ]
+
             social_media_dictionary['text']=social_media_data['posts'][i]['text'].encode('ascii', errors='ignore')
             social_media_dictionary['social_media_network']=social_media_data['posts'][i]['network']
             social_media_dictionary['social_media_link']=social_media_data['posts'][i]['permalink']
             social_media_dictionary['user_profile_image']=social_media_data['posts'][i]['user_profile_image_url'].replace("//","")
             epoch_time=social_media_data['posts'][i]['post_time']
-			real_time=datetime.datetime.fromtimestamp(epoch_time).strftime("%c")
-			social_media_dictionary['time']=real_time
+            real_time=datetime.datetime.fromtimestamp(epoch_time).strftime("%c")
+            social_media_dictionary['time']=real_time
             social_media_dictionary['post_date']=social_media_data['posts'][i]['post_date'][:-5]
             social_media_dictionary['real_user_name']=social_media_data['posts'][i]['user_real_name'].encode('ascii', errors='ignore')
-            social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
-            social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
 
         except:
             pass
@@ -80,5 +89,5 @@ def main():
             pool.start(pool.spawn(t[0],t[1]))
     pool.join()
 
-# main()
+main()
 # print 'No of Requests : ',req
