@@ -2,7 +2,7 @@
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 
 html * {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
@@ -14,6 +14,7 @@ body {
 }
 
 a {
+	color: #b1b1b1;
     text-decoration: none;
 }
 
@@ -25,7 +26,7 @@ ul {
     position: absolute;
     width: 20%;
     height: 100%;
-    background: #111;
+    background: #212121;
     color: #ffffff;
 }
 
@@ -87,5 +88,5 @@ ul {
     position: absolute;
     width: 80%;
     height: 10%;
-    background: #e2e;
+    background: #9E9E9E;
 }
