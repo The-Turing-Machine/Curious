@@ -9,17 +9,16 @@ REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHORIZE_URL = "https://api.twitter.com/oauth/authorize?oauth_token="
 ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
+#CK=["XX254OwNWCuctNrlo29GW2Ihx","gcLU6rXGwRHUaWOSl9J648bkp","JlchYZFCVgx0cPrjxtUPumZaO","BzKONSSMBFeqtbHZbMZNU5XC3","yWOim0eBDzMrN8FlOilcRTVCK","9u8p3OjDgDvFjTQQQ5XYQqB8v"]
 
-CK = ["N8CefcBhNEgLLzj5C5NTkwk7I","XX254OwNWCuctNrlo29GW2Ihx","gcLU6rXGwRHUaWOSl9J648bkp","JlchYZFCVgx0cPrjxtUPumZaO","BzKONSSMBFeqtbHZbMZNU5XC3","yWOim0eBDzMrN8FlOilcRTVCK","9u8p3OjDgDvFjTQQQ5XYQqB8v"]
-CS = ["XvalzhATRiMwtRmz5g6jrU4yI9VrMvGRbPYpWaXYtPEofMYyMT", "KDTb6Q4swNH1ThMO13SH9vzhOQecP9705wFXw6qPg90S52ISZU","JQ5E8Wn0XutYqslBdjGRJxi5snbh2bDmGAeq3mI8bXnmyYVVAn","2Y5s28O5Mt4Ti5i24WG05fkUPkQV5LPJYLktBPzXx1OrZtgZaz","SvhHxNdwb2X4bXL6UnUrkqEZbPUxqDeFEnfhMQLhpx45sU4fTi","4iGTjaL0r9slwCtU5jcQDdqIxvfYsp62Si71128eCJpd3jRJnw","sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"]
+CK=["BzKONSSMBFeqtbHZbMZNU5XC3","yWOim0eBDzMrN8FlOilcRTVCK","9u8p3OjDgDvFjTQQQ5XYQqB8v"]
+CS =["SvhHxNdwb2X4bXL6UnUrkqEZbPUxqDeFEnfhMQLhpx45sU4fTi","4iGTjaL0r9slwCtU5jcQDdqIxvfYsp62Si71128eCJpd3jRJnw","sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"]
 
-CONSUMER_KEY = CK[0]
-CONSUMER_SECRET =CS[0]
 # CONSUMER_KEY = "N8CefcBhNEgLLzj5C5NTkwk7I"
 # CONSUMER_SECRET = "XvalzhATRiMwtRmz5g6jrU4yI9VrMvGRbPYpWaXYtPEofMYyMT"
 
-# CONSUMER_KEY="XX254OwNWCuctNrlo29GW2Ihx"
-# CONSUMER_SECRET = "KDTb6Q4swNH1ThMO13SH9vzhOQecP9705wFXw6qPg90S52ISZU"
+CONSUMER_KEY="XX254OwNWCuctNrlo29GW2Ihx"
+CONSUMER_SECRET = "KDTb6Q4swNH1ThMO13SH9vzhOQecP9705wFXw6qPg90S52ISZU"
 
 # CONSUMER_KEY="gcLU6rXGwRHUaWOSl9J648bkp"
 # CONSUMER_SECRET = "JQ5E8Wn0XutYqslBdjGRJxi5snbh2bDmGAeq3mI8bXnmyYVVAn"
@@ -36,31 +35,25 @@ CONSUMER_SECRET =CS[0]
 # CONSUMER_KEY="9u8p3OjDgDvFjTQQQ5XYQqB8v"
 # CONSUMER_SECRET = "sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"
 
-i=0
+#
+# CONSUMER_KEY=CK[2]
+# CONSUMER_SECRET = CS[2]
 
 
-OT=["4653955494-Cbul45ZQvzsK16aELSN2O6ecVaT4UbSDujfCkqx","4653955494-VRs3MN2aPRhiQFBIdPyMs8S68X1cxaBT81s0bY7", "4653955494-2z4klWrjEk8PhV1HCT9QFvibjPouDuj0z2YIQh6","4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii", "4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii", "4653955494-PeENb05JJcTnWJ251V0CmonDCTR0w97hSX6WeN3","4653955494-HI5zQDkJD384A1kq0aXKLtcMFtdsQmtob7pcqgU","4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"]
-OTS=["8CwjuAi7ctdJQIfW4a835IdLYcap8cl5V2ZPaG0rm7exW","2eAn9kfBofZpuFHuYaakbwbNqrpeesInMas1AAdkxQKb1","Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw","haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R","haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R","pNkTXHJ8YiehkdUvXaMzHc3PeKOQyZs18PbpoNef44lUH","g7d049GSwqmAEBI0aSsBTXpWGfweOYIpTt1ktW8j1ZbhU","esHifHRZcQgGJPGfgaZmGcjlUd23IbdjuvbdOSko3CJub"]
 
-OAUTH_TOKEN=OT[0]
-OAUTH_TOKEN_SECRET = OTS[0]
+
 
 # OAUTH_TOKEN = "4653955494-Cbul45ZQvzsK16aELSN2O6ecVaT4UbSDujfCkqx"
 # OAUTH_TOKEN_SECRET ="8CwjuAi7ctdJQIfW4a835IdLYcap8cl5V2ZPaG0rm7exW"
 
-
-# OAUTH_TOKEN="4653955494-VRs3MN2aPRhiQFBIdPyMs8S68X1cxaBT81s0bY7"
-# OAUTH_TOKEN_SECRET="2eAn9kfBofZpuFHuYaakbwbNqrpeesInMas1AAdkxQKb1"
+OAUTH_TOKEN="4653955494-VRs3MN2aPRhiQFBIdPyMs8S68X1cxaBT81s0bY7"
+OAUTH_TOKEN_SECRET="2eAn9kfBofZpuFHuYaakbwbNqrpeesInMas1AAdkxQKb1"
 
 # OAUTH_TOKEN= "4653955494-2z4klWrjEk8PhV1HCT9QFvibjPouDuj0z2YIQh6"
 # OAUTH_TOKEN_SECRET="Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw"
 
 # OAUTH_TOKEN = "4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii"
 # OAUTH_TOKEN_SECRET ="haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R"
-
-# OAUTH_TOKEN =  "4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii"
-# OAUTH_TOKEN_SECRET = "haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R"
-
 
 # OAUTH_TOKEN = "4653955494-PeENb05JJcTnWJ251V0CmonDCTR0w97hSX6WeN3"
 # OAUTH_TOKEN_SECRET = "pNkTXHJ8YiehkdUvXaMzHc3PeKOQyZs18PbpoNef44lUH"
@@ -71,7 +64,11 @@ OAUTH_TOKEN_SECRET = OTS[0]
 # OAUTH_TOKEN =  "4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"
 # OAUTH_TOKEN_SECRET =  "esHifHRZcQgGJPGfgaZmGcjlUd23IbdjuvbdOSko3CJub"
 
+OT =["4653955494-PeENb05JJcTnWJ251V0CmonDCTR0w97hSX6WeN3","4653955494-HI5zQDkJD384A1kq0aXKLtcMFtdsQmtob7pcqgU","4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"]
+OTS = ["pNkTXHJ8YiehkdUvXaMzHc3PeKOQyZs18PbpoNef44lUH","g7d049GSwqmAEBI0aSsBTXpWGfweOYIpTt1ktW8j1ZbhU","esHifHRZcQgGJPGfgaZmGcjlUd23IbdjuvbdOSko3CJub"]
 
+# OAUTH_TOKEN = OT[2]
+# OAUTH_TOKEN_SECRET = OTS[2]
 s = requests.session()
 
 
@@ -119,16 +116,18 @@ def setup_oauth():
 
 pp = pprint.PrettyPrinter(indent=4)
 
-def get_oauth():
+def get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET):
     oauth = OAuth1(CONSUMER_KEY,
                 client_secret=CONSUMER_SECRET,
                 resource_owner_key=OAUTH_TOKEN,
                 resource_owner_secret=OAUTH_TOKEN_SECRET)
+    print CONSUMER_KEY
+    print "chaneg agaib"
     return oauth
 
 dic = {}
-def get_trend_hashtags(woeid):
-        for i in woeid:
+def get_trend_hashtags(woeid,oauth):
+        for i in woeid[15:]:
             # try:
             b = s.get(url="https://api.twitter.com/1.1/trends/place.json?id="+i+"", auth=oauth)
             # print b.json()
@@ -143,14 +142,14 @@ def get_trend_hashtags(woeid):
                 dic[i] = tag[0:10]
                 print dic
             except:
+                pass
                 print "error"
-                CONSUMER_KEY = CK[i+1]
-                CONSUMER_SECRET = CS[i+1]
-                OAUTH_TOKEN = OT[i+1]
-                OAUTH_TOKEN_SECRET = OTS[i+1]
-                oauth = get_oauth()
-
-
+                CONSUMER_KEY="9u8p3OjDgDvFjTQQQ5XYQqB8v"
+                CONSUMER_SECRET = "sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"
+                OAUTH_TOKEN =  "4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"
+                OAUTH_TOKEN_SECRET =  "esHifHRZcQgGJPGfgaZmGcjlUd23IbdjuvbdOSko3CJub"
+                print "changed"
+                oauth = get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
 
 
 
@@ -168,8 +167,8 @@ if __name__ == "__main__":
         print "OAUTH_TOKEN_SECRET: " + secret
         print
     else:
-        oauth = get_oauth()
-        get_trend_hashtags(woeid)
+        oauth = get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
+        get_trend_hashtags(woeid,oauth)
         # r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
         # a = r.json()
         # print len(a)
