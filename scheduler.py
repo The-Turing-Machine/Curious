@@ -7,6 +7,7 @@ import gevent.pool
 import gevent.queue
 import gevent
 import json
+import data as data
 
 session = requests.Session()
 max_workers = 32
@@ -18,7 +19,7 @@ hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub99
 'EbruNewsUpdate','AlbinismKE']
 
 
-all_social_media_link=[]
+
 
 def data_social_medias(hashtag):
     print 'Requesting hashtag - ',hashtag
@@ -41,16 +42,20 @@ def data_social_medias(hashtag):
             social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
         except:
             pass
-        all_social_media_link.append(social_media_dictionary)
+        # data.all_social_media_link.append(social_media_dictionary)
+        data.all_social_media_link += str(social_media_dictionary)
     print 'Recieved hashtag - ',hashtag
 
-for item in hashtags:
-    pool.start(pool.spawn(data_social_medias,item))
-pool.join()
 
 
-while not queue.empty() and not pool.full():
-    for x in xrange(0, min(queue.qsize(), pool.free_count())):
-        t = queue.get_nowait()
-        pool.start(pool.spawn(t[0],t[1]))
-pool.join()
+def main():
+    for item in hashtags:
+        pool.start(pool.spawn(data_social_medias,item))
+    pool.join()
+
+
+    while not queue.empty() and not pool.full():
+        for x in xrange(0, min(queue.qsize(), pool.free_count())):
+            t = queue.get_nowait()
+            pool.start(pool.spawn(t[0],t[1]))
+    pool.join()
