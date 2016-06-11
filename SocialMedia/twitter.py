@@ -133,7 +133,13 @@ def get_trend_hashtags(woeid,oauth):
             tag =[]
             try:
             # pp.pprint(b.json())
+                loc = b.json()[0]['locations']
                 for k in b.json()[0]['trends']:
+
+                    vol = k['tweet_volume']
+                    print loc
+                    print vol
+                    # print pp.pprint(b.json())
                     tag.append(k['query'])
 
                     # print k['query']
