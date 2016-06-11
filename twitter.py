@@ -52,3 +52,14 @@ def get_oauth():
                 resource_owner_key=OAUTH_TOKEN,
                 resource_owner_secret=OAUTH_TOKEN_SECRET)
     return oauth
+
+
+if __name__ == "__main__":
+    if not OAUTH_TOKEN:
+        token, secret = setup_oauth()
+        print "OAUTH_TOKEN: " + token
+        print "OAUTH_TOKEN_SECRET: " + secret
+        print
+    else:
+        oauth = get_oauth()
+        r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
