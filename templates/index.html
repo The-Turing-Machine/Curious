@@ -1,101 +1,56 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    (function(w) {
-        "use strict";
-        var loadCSS = function(href, before, media) {
-            var doc = w.document;
-            var ss = doc.createElement("link");
-            var ref;
-            if (before) {
-                ref = before;
-            } else {
-                var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-                ref = refs[refs.length - 1];
-            }
-            var sheets = doc.styleSheets;
-            ss.rel = "stylesheet";
-            ss.href = href;
-            ss.media = "only x";
-
-            function ready(cb) {
-                if (doc.body) {
-                    return cb();
-                }
-                setTimeout(function() {
-                    ready(cb);
-                });
-            }
-            ready(function() {
-                ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
-            });
-            var onloadcssdefined = function(cb) {
-                var resolvedHref = ss.href;
-                var i = sheets.length;
-                while (i--) {
-                    if (sheets[i].href === resolvedHref) {
-                        return cb();
-                    }
-                }
-                setTimeout(function() {
-                    onloadcssdefined(cb);
-                });
-            };
-
-            function loadCB() {
-                if (ss.addEventListener) {
-                    ss.removeEventListener("load", loadCB);
-                }
-                ss.media = media || "all";
-            }
-            if (ss.addEventListener) {
-                ss.addEventListener("load", loadCB);
-            }
-            ss.onloadcssdefined = onloadcssdefined;
-            onloadcssdefined(loadCB);
-            return ss;
-        };
-        if (typeof exports !== "undefined") {
-            exports.loadCSS = loadCSS;
-        } else {
-            w.loadCSS = loadCSS;
-        }
-    }(typeof global !== "undefined" ? global : this));
-    loadCSS("../static/css/normalize.css");
-    loadCSS("../static/fonts/font-awesome/css/font-awesome.min.css");
-    loadCSS("https://fonts.googleapis.com/css?family=Montserrat");
-    </script>
-    <link rel="stylesheet" href="../static/css/main.css">
- </head>
+    <title>Curious - The Real News</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="../static/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../static/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="../static/css/ie9.css" /><![endif]-->
+</head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-        <div id="head"></div>
-        <div id="sidebar"></div>
-        <div id="central">
-            <div id="map"></div>
-            <div id="posts"></div>
-        3</div>
-    <!-- scripts -->
-    <script async src="../static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script async src="../static/js/main.js"></script>
+    <div id="header">
+        <div class="top">
+            <div id="logo">
+                <h1 id="title">Curious</h1>
+                <p>Your Guide to Real News</p>
+            </div>
+            <nav id="nav">
+            </nav>
+        </div>
+        <div class="bottom">
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <section id="top" class="one dark cover">
+            <div class="container">
+
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <ul class="copyright">
+            <li>&copy; Curious. All rights reserved.</li>
+            <li>Design: <a href="http://github.com/The-Turing-Machine">The Turing Machine</a></li>
+        </ul>
+    </div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.scrolly.min.js"></script>
+    <script src="../static/js/jquery.scrollzer.min.js"></script>
+    <script src="../static/js/skel.min.js"></script>
+    <script src="../static/js/util.js"></script>
+    <!--[if lte IE 8]><script src="../static/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../static/js/main.js"></script>
 </body>
 
 </html>
