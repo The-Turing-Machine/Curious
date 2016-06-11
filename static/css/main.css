@@ -1,5 +1,7 @@
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+
 html * {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     -webkit-font-smoothing: antialiased;
@@ -91,11 +93,32 @@ input[type='checkbox']:checked.toggle:after {
 	margin-top: 5%;
 }
 
+.a {
+    font-family: 'Open Sans', sans-serif;;
+    margin: 5px;
+  display: table;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to left, #006064, #212121);
+  border-radius: 25px 0px 25px 0px;
+  text-align: center;
+}
+
+.a span {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+    display: table-cell;
+  vertical-align: middle;
+}
+
 #header {
     position: absolute;
     width: 20%;
     height: 100%;
-    background: #212121;
+    background: linear-gradient(to left, rgba(0, 113, 122, 0.9), rgba(0, 0, 10, 0.8)),url(http://pontosdevista.pt/static/uploads/2015/11/media-wall-1600x700_c.jpg);
+    background-size: cover;
+    position: 50% 50%;
     color: #ffffff;
 }
 
@@ -133,7 +156,7 @@ input[type='checkbox']:checked.toggle:after {
     position: absolute;
     height: 60px;
     width: 60px;
-    background: linear-gradient(to left, #485563, #29323c);
+
 }
 
 #main {
