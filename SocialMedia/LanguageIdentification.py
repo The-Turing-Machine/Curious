@@ -8675,6 +8675,7 @@ all_detected_languages=[]
 def LanguageIdentification(text_query):
 
         language_dictionary={}
+        language_dictionary['post_id']=data[i]['post_id']
 
         try:
             r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
@@ -8700,8 +8701,6 @@ def LanguageIdentification(text_query):
 for i in range(0,len(data)):
 
     text_query=data[i]['text']
-
-    #anguage_dictionary['post_id']=data[i]['id']
 
     LanguageIdentification(text_query)
 

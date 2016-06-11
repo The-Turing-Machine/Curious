@@ -66,7 +66,7 @@ def data_social_medias(hashtag):
 			social_media_dictionary['real_user_name']=social_media_data['posts'][i]['user_real_name'].encode('ascii', errors='ignore')
 			social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
 			social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
-			social_media_dictionary['post_id']=social_media_data['id']
+			social_media_dictionary['post_id']=social_media_data['posts'][i]['post_id']
 		except:
 			pass
 

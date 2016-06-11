@@ -8674,6 +8674,7 @@ sentiment_analyzer_list=[]
 def SentimentAnalyser(text_query):
 
             sentiment_anaylsis_dictionary={}
+            language_dictionary['post_id']=data[i]['id']
 
             r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[1]['text'])
 
