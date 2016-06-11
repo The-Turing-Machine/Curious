@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="../static/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
     <!--[if lte IE 8]><link rel="stylesheet" href="../static/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="../static/css/ie9.css" /><![endif]-->
 </head>
@@ -14,29 +17,23 @@
 <body>
     <div id="header">
         <div class="top">
-            <div id="logo">
-                <h1 id="title">Curious</h1>
-                <p>Your Guide to Real News</p>
-            </div>
-            <nav id="nav">
-            </nav>
+            <span id="logo"></span>
+            <h1 id="title">Curious</h1>
+            <p>Your Guide to Real News</p>
         </div>
         <div class="bottom">
             <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-                <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-github"></a></li>
+                <li><a href="#" class="fa fa-dribbble"></a></li>
+                <li><a href="#" class="fa fa-envelope"></a></li>
             </ul>
         </div>
     </div>
     <div id="main">
-        <section id="top" class="one dark cover">
-            <div class="container">
-
-            </div>
-        </section>
+        <div id="map">
+        </div>
     </div>
     <div id="footer">
         <ul class="copyright">
@@ -45,11 +42,6 @@
         </ul>
     </div>
     <script src="../static/js/jquery.min.js"></script>
-    <script src="../static/js/jquery.scrolly.min.js"></script>
-    <script src="../static/js/jquery.scrollzer.min.js"></script>
-    <script src="../static/js/skel.min.js"></script>
-    <script src="../static/js/util.js"></script>
-    <!--[if lte IE 8]><script src="../static/js/ie/respond.min.js"></script><![endif]-->
     <script src="../static/js/main.js"></script>
 </body>
 
