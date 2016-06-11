@@ -48,7 +48,7 @@ pp = pprint.PrettyPrinter(indent=4)
 #Function which pulls the data 
 def data_social_medias(hashtag):
 
-	r=requests.get("https://post-cache.tagboard.com/search/"+hashtag+"?excluded_networks=twitter&count=100")
+	r=requests.get("https://post-cache.tagboard.com/search/"+hashtag+"?count=100")
 
 	social_media_data=json.loads(r.text)
 	no_of_posts=len(social_media_data['posts'])
@@ -66,6 +66,7 @@ def data_social_medias(hashtag):
 			social_media_dictionary['real_user_name']=social_media_data['posts'][i]['user_real_name'].encode('ascii', errors='ignore')
 			social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
 			social_media_dictionary['videos']=social_media_data['posts'][i]['videos']
+			social_media_dictionary['post_id']=social_media_data['id']
 		except:
 			pass
 
