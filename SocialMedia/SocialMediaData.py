@@ -75,7 +75,7 @@ def data_social_medias(hashtag):
 for hashtag in hashtags:
 	data_social_medias(hashtag)
 
-#pp.pprint(all_social_media_link)	
+pp.pprint(all_social_media_link)	
 print len(all_social_media_link)
 
 
