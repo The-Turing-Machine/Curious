@@ -55,6 +55,13 @@ def get_oauth():
     return oauth
 
 def get_trend_hashtags(woeid):
+        for i in woeid:
+            try:
+                b = requests.get(url="https://api.twitter.com/1.1/trends/place.json?id="+i+"", auth=oauth)
+                pp.pprint(b.json())
+            except:
+                print "not available"
+
 
 
 
@@ -66,14 +73,15 @@ if __name__ == "__main__":
         print
     else:
         oauth = get_oauth()
-        r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
-        a = r.json()
-        print len(a)
-        for i in range(0,100):
-
-            print "tweet="+a['statuses'][i]['text']
-            print "place="+str(a['statuses'][i]['place'])
-            print "coordibnates="+str(a['statuses'][i]['coordinates'])
+        get_trend_hashtags(woeid)
+        # r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
+        # a = r.json()
+        # print len(a)
+        # for i in range(0,100):
+        #
+        #     print "tweet="+a['statuses'][i]['text']
+        #     print "place="+str(a['statuses'][i]['place'])
+        #     print "coordibnates="+str(a['statuses'][i]['coordinates'])
             # print a['statuses'][0]['text']
             # print "tweet="+a['statuses'][1]['text']
             # print "place="+a['statuses'][1]['place']
