@@ -8670,24 +8670,13 @@ data=[   {   'post_date': u'2016-06-11T15:54:48',
         'user_profile_image': u'scontent.cdninstagram.com/t51.2885-19/s150x150/11296883_945210568870885_1542233124_a.jpg'}]
 
 length_data=len(data)
+print length_data
+try:
+    for i in range(0,length_data):
+        r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[i]['text'])
+        print r1.json()
+except:
+    pass
 
-for i in range(0,length_data):
-    try:
-        r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[i]['text'])
-
-        all_post_data=json.loads(r1.text)
-
-        job_id=all_post_data['jobID']
-
-        r2=requests.get('https://api.havenondemand.com/1/job/status/'+job_id+'?apikey=22469062-d90b-45bd-94c7-1399b139ba8f')
-
-        api_response=json.loads(r2.text)
-
-        detected_language=api_response['actions'][0]['result']['language']
-        print detected_language
-
-    except:
-        pass
-
-
-
+# r2=requests.get('https://api.havenondemand.com/1/job/status/w-eu_3555d852-22a8-4d1f-99a8-43903ca14a84?apikey=22469062-d90b-45bd-94c7-1399b139ba8f')
+# print r2.json()
