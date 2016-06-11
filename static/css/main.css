@@ -22,6 +22,75 @@ ul {
     list-style-type: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type='checkbox'].toggle {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 14px;
+    background-color: #fafafa;
+    position: relative;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+	box-shadow: none;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type='checkbox'].toggle:hover:after {
+    background-color: #c7c7c7;
+}
+
+input[type='checkbox'].toggle:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: #aeaeae;
+    top: 1.5px;
+    left: 1.5px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type='checkbox']:checked.toggle {
+    -moz-box-shadow: inset 0 0 0 15px #158EC6;
+    -webkit-box-shadow: inset 0 0 0 15px #158EC6;
+    box-shadow: inset 0 0 0 15px #158EC6;
+}
+
+input[type='checkbox']:checked.toggle:after {
+    left: 21px;
+    background-color: #fff;
+}
+
+.filter span {
+	margin: 8%;
+	padding-right: 12%;
+}
+
+.filter input {
+	margin-right: 15%;
+	margin-top: 5%;
+}
+
 #header {
     position: absolute;
     width: 20%;
