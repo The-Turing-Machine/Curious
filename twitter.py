@@ -9,8 +9,6 @@ REQUEST_TOKEN_URL = "https://api.twitter.com/oauth/request_token"
 AUTHORIZE_URL = "https://api.twitter.com/oauth/authorize?oauth_token="
 ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 
-# CONSUMER_KEY = "rcPzx7rJtywQMk0VmdGLCAxjb"
-# CONSUMER_SECRET = "DE3J8NLlSVSnGJuQ0U3GKCBjrIo7vBxQCEeCOj1HoS2bP74NPv"
 
 # CONSUMER_KEY = "N8CefcBhNEgLLzj5C5NTkwk7I"
 # CONSUMER_SECRET = "XvalzhATRiMwtRmz5g6jrU4yI9VrMvGRbPYpWaXYtPEofMYyMT"
@@ -18,30 +16,64 @@ ACCESS_TOKEN_URL = "https://api.twitter.com/oauth/access_token"
 # CONSUMER_KEY="XX254OwNWCuctNrlo29GW2Ihx"
 # CONSUMER_SECRET = "KDTb6Q4swNH1ThMO13SH9vzhOQecP9705wFXw6qPg90S52ISZU"
 
-CONSUMER_KEY="gcLU6rXGwRHUaWOSl9J648bkp"
-CONSUMER_SECRET = "JQ5E8Wn0XutYqslBdjGRJxi5snbh2bDmGAeq3mI8bXnmyYVVAn"
+# CONSUMER_KEY="gcLU6rXGwRHUaWOSl9J648bkp"
+# CONSUMER_SECRET = "JQ5E8Wn0XutYqslBdjGRJxi5snbh2bDmGAeq3mI8bXnmyYVVAn"
+
+# CONSUMER_KEY="JlchYZFCVgx0cPrjxtUPumZaO"
+# CONSUMER_SECRET = "2Y5s28O5Mt4Ti5i24WG05fkUPkQV5LPJYLktBPzXx1OrZtgZaz"
+
+CONSUMER_KEY="BzKONSSMBFeqtbHZbMZNU5XC3"
+CONSUMER_SECRET = "SvhHxNdwb2X4bXL6UnUrkqEZbPUxqDeFEnfhMQLhpx45sU4fTi"
+
+# CONSUMER_KEY="yWOim0eBDzMrN8FlOilcRTVCK"
+# CONSUMER_SECRET = "4iGTjaL0r9slwCtU5jcQDdqIxvfYsp62Si71128eCJpd3jRJnw"
 
 
 
 
-# OAUTH_TOKEN = "4653955494-jbxlbxolDzQv16TA6astzszHOT7HHJbtZTy5HNV"
-# OAUTH_TOKEN_SECRET = "3ndOvcdpb79OR73BfJtJ64i9Qg6X8qWIpcI4SAcnIfKSB"
 
-# OAUTH_TOKEN ="4653955494-Cbul45ZQvzsK16aELSN2O6ecVaT4UbSDujfCkqx"
-# OAUTH_TOKEN_SECRET = "8CwjuAi7ctdJQIfW4a835IdLYcap8cl5V2ZPaG0rm7exW"
+
+# OAUTH_TOKEN = "4653955494-Cbul45ZQvzsK16aELSN2O6ecVaT4UbSDujfCkqx"
+# OAUTH_TOKEN_SECRET ="8CwjuAi7ctdJQIfW4a835IdLYcap8cl5V2ZPaG0rm7exW"
+
 
 # OAUTH_TOKEN="4653955494-VRs3MN2aPRhiQFBIdPyMs8S68X1cxaBT81s0bY7"
 # OAUTH_TOKEN_SECRET="2eAn9kfBofZpuFHuYaakbwbNqrpeesInMas1AAdkxQKb1"
 
-OAUTH_TOKEN= "4653955494-2z4klWrjEk8PhV1HCT9QFvibjPouDuj0z2YIQh6"
-OAUTH_TOKEN_SECRET="Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw"
+# OAUTH_TOKEN= "4653955494-2z4klWrjEk8PhV1HCT9QFvibjPouDuj0z2YIQh6"
+# OAUTH_TOKEN_SECRET="Kb01dB5abJyhW7to5rYRB9CTW0LwDwG6F4mOUMEQlTxYw"
+
+# OAUTH_TOKEN = "4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii"
+# OAUTH_TOKEN_SECRET ="haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R"
+
+# OAUTH_TOKEN =  "4653955494-7OzM7jwuYoAxVFDAiICYRf4yQP0y5XGItr1G6ii"
+# OAUTH_TOKEN_SECRET = "haXwpryYzHoPrOLxNVjGAhRuImvhPdjcw3KfBlQlyIc8R"
+
+
+OAUTH_TOKEN = "4653955494-PeENb05JJcTnWJ251V0CmonDCTR0w97hSX6WeN3"
+OAUTH_TOKEN_SECRET = "pNkTXHJ8YiehkdUvXaMzHc3PeKOQyZs18PbpoNef44lUH"
+
+# OAUTH_TOKEN =  "4653955494-HI5zQDkJD384A1kq0aXKLtcMFtdsQmtob7pcqgU"
+# OAUTH_TOKEN_SECRET = "g7d049GSwqmAEBI0aSsBTXpWGfweOYIpTt1ktW8j1ZbhU"
+
+
+
 
 
 
 
 coun = ["Afghanistan","Argentina","Armenia","Australia","Austria","Bahrain","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Czech Republic","North Korea","Democratic Republic of the Cong","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Republic of Korea (South Korea)","Republic of Moldova","Romania","Russian Federation","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syrian Arab Republic","Tajikistan","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom of Great Britain and Northern Ireland","United Republic of Tanzania","United States of America","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"]
 
-woeid = [u'23424740', u'23424747', u'23424748', u'23424750', u'23424775', u'23424782', u'23424787', u'23424868', u'23424796', u'23424800', u'23424801', u'23424802', u'23424819', u'23424829', u'23424824', u'23424833', u'83123', u'23424848', u'23424846', u'23424803', u'23424852', u'23424853', u'23424858', u'23424856', u'2429994', u'23424874', u'23424899', u'23424891', u'23424897', u'23424932', u'23424896', u'23424894', u'23424900', u'24865720', u'483301', u'23424887', u'20069817', u'23424893', u'23424902', u'23424763', u'23424987', u'23424912', u'23424911', u'23424909', u'23424916', u'23424906', u'23424908', u'29145317', u'23424898', u'23424922', u'23424927', u'159386', u'12491802', u'23424917', u'23424919', u'23424934', u'23424923', u'23424925', u'28395013', u'23424868', u'23424885', u'23424933', u'23424936', u'23424937', u'23424940', u'1325621', u'2347676', u'23424992', u'532373', u'1441680', u'29125356', u'23424943', u'20069818', u'23424941', u'1062844', u'1062617', u'23424877', u'23424945', u'23424766', u'23424949', u'24865670', u'23424952', u'23424950', u'12467072', u'905958', u'23424913', u'23424993', u'23424954', u'23424957', u'23424956', u'23424961', u'23424960', u'23424968', u'1048627', u'23424964', u'23424958', u'23424967', u'23424969', u'23424972', u'23424970', u'1301134', u'23424976', u'23424738', u'20070563', u'23424973', u'23424977', u'23424979', u'23424980', u'23424907', u'23424982', u'23424984', u'23425002', u'23425003', u'23425004']
+woeid =[u'23424740', u'23424747', u'23424748', u'23424750', u'23424775', u'23424782', u'23424787', u'23424868', u'23424796', u'23424800', u'23424801', u'23424802', u'23424819', u'23424829', u'23424824', u'23424833', u'83123', u'23424848', u'23424846', u'23424803', u'23424852', u'23424853', u'23424856', u'23424874', u'23424900', u'23424909', u'23424908', u'23424898', u'23424922', u'23424919', u'23424934', u'23424923', u'23424925', u'23424868', u'23424936', u'1062617', u'23424950', u'23424954', u'23424957', u'23424969', u'23424976', u'23424738', u'23424982', u'23424984']
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,7 +119,7 @@ def get_oauth():
 
 dic = {}
 def get_trend_hashtags(woeid):
-        for i in woeid[25:]:
+        for i in woeid[30:]:
             # try:
             b = requests.get(url="https://api.twitter.com/1.1/trends/place.json?id="+i+"", auth=oauth)
             # print b.json()
