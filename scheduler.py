@@ -95,7 +95,7 @@ def main():
                                     }
                             }  for key in data_twitter.keys() ]
 
-    data.tags_list =  [ { 'country':key, tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
+    data.tags_list =  [ { 'country':key, 'tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
 
     for key in data_twitter.keys():
         tags_list = [ tag[0][3:]  for tag in data_twitter[key][1:] ]
