@@ -8673,33 +8673,37 @@ sentiment_analyzer_list=[]
 
 def SentimentAnalyser(text_query):
 
-            sentiment_anaylsis_dictionary={}
-            language_dictionary['post_id']=data[i]['id']
+            sentiment_analysis_dictionary={}
 
-            r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+data[1]['text'])
+            # sentiment_analysis_dictionary['post_id']=data[i]['post_id']
+
+            r1=requests.get("https://api.havenondemand.com/1/api/sync/analyzesentiment/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
 
             api_response=json.loads(r1.text)
+            # print api_response['aggregate']
+            # agg=api_response['aggregate']
+            # sentiment_analysis_dictionary['aggregate']=api_response['aggregate']
+            
+            if 'aggregate' not in api_response:
+                return
 
-            aggregate=api_response['aggregate']
+            for key in api_response.keys():
+                # print key
+                if api_response[key] != [] and key != 'aggregate':
+                    print api_response
+                    print api_response[key][0]
+                    sentiment_analysis_dictionary['sentiment']=api_response[key][0]['sentiment']
+                    # sentiment_analysis_dictionary['response']=api_response[key][0]['sentiment']
+                elif api_response[key] != [] and key == 'aggregate':
+                    sentiment_analysis_dictionary['aggregate']=api_response[key]
 
-            sentiment_anaylsis_dictionary['aggregate']=aggregate
 
-            keys=api_response.keys()
 
-            for i in range(1,3):
-
-                if (api_response[keys[i]] != []):
-                    sentiment_anaylsis_dictionary['response']=api_response[keys[i]]
-                else:
-                    pass
-
-            sentiment_analyzer_list.append(sentiment_anaylsis_dictionary)
+            sentiment_analyzer_list.append(sentiment_analysis_dictionary)
 
 for i in range(0,len(data)):
 
     text_query=data[i]['text']
-
-    language_dictionary['post_id']=data[i]['id']
 
     SentimentAnalyser(text_query)
 
