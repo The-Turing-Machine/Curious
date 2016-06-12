@@ -214,7 +214,7 @@ def main():
         print
     else:
         oauth = get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
-        # get_trend_hashtags(woeid,oauth)
+        get_trend_hashtags(woeid,oauth)
 
         # r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
         # a = r.json()
