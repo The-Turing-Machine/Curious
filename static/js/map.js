@@ -94,5 +94,7 @@ map.on('click', function(e) {
     }
 });
 
-
+$.get('http://localhost:5000/data',function(response){
+    console.log(response.data);
+});
 
