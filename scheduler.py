@@ -16,25 +16,22 @@ req = 0
 pool = gevent.pool.Pool(max_workers)
 queue = gevent.queue.Queue()
 
-hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub999Degrees',
-'Panama','Giroud','Payet']
-
+hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub999Degrees','Panama','Giroud','Payet','Burundi','Monday+and+Thursday','BREAKING+NEWS','Chase+Bank','Governor+Nderitu+Gachagua','CS+Joseph+Nkaissery','Kidero','Nigeria','Wenger','Auditor+General','Ramadan','QwetuRoadShow','TourismLiveKE','SiganaFest2016','EURO2016','UhuruInUkambani','QTVJAMROCK','NBAFinals','FaithFriday','TwendeMacha','WBWR','MuhammadAli','NZLvWAL','TransformingCounties','HOTSMS','EbruNewsUpdate','AlbinismKE']
 
 def LanguageIdentification(text_query_full):
     global req
     print 'Request sent for ', text_query_full['post_id']
     pid = text_query_full['post_id']
     text_query = text_query_full['text']
-
-    language_dictionary={}
-    r1=requests.get("https://api.havenondemand.com/1/api/sync/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
-    req+=1
-    api_response=json.loads(r1.text)
-    detected_language=api_response['language']
-    language_dictionary[pid]=detected_language
-    data.all_detected_languages.append(language_dictionary)
     try:
-        pass
+
+        language_dictionary={}
+        r1=requests.get("https://api.havenondemand.com/1/api/sync/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
+        req+=1
+        api_response=json.loads(r1.text)
+        detected_language=api_response['language']
+        language_dictionary[pid]=detected_language
+        data.all_detected_languages.append(language_dictionary)
     except:
         pass
     print 'Request recieved for ', pid, language_dictionary
@@ -49,6 +46,7 @@ def data_social_medias(hashtag):
 
     for i in range(0,no_of_posts):
     	social_media_dictionary={}
+        social_media_dictionary['hashtag'] = hashtag
         social_media_dictionary['post_id']=social_media_data['posts'][i]['post_id']
 
         if 'videos' in social_media_data['posts'][i]:
@@ -80,6 +78,7 @@ def data_social_medias(hashtag):
             pass
         data.all_social_media_link.append(social_media_dictionary)
         queue.put_nowait((LanguageIdentification,social_media_dictionary))
+
     print 'Recieved hashtag - ',hashtag
 
 def main():
@@ -92,5 +91,5 @@ def main():
             pool.start(pool.spawn(t[0],t[1]))
     pool.join()
 
-main()
+# main()
 # print 'No of Requests : ',req
