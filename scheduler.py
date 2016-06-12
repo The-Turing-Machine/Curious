@@ -17,8 +17,7 @@ pool = gevent.pool.Pool(max_workers)
 queue = gevent.queue.Queue()
 
 hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub999Degrees',
-'Panama','Giroud','Payet','Burundi','Monday+and+Thursday','BREAKING+NEWS','Chase+Bank','Governor+Nderitu+Gachagua','CS+Joseph+Nkaissery','Kidero','Nigeria','Wenger','Auditor+General','Ramadan','QwetuRoadShow','TourismLiveKE','SiganaFest2016','EURO2016','UhuruInUkambani','QTVJAMROCK','NBAFinals','FaithFriday','TwendeMacha','WBWR','MuhammadAli','NZLvWAL','TransformingCounties','HOTSMS',
-'EbruNewsUpdate','AlbinismKE']
+'Panama','Giroud','Payet']
 
 
 def LanguageIdentification(text_query_full):
