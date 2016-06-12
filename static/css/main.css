@@ -190,9 +190,9 @@ input[type='checkbox']:checked.toggle:after {
 #posts {
     position: absolute;
     height: 25%;
-    width: 100%;
+    width: 97%;
     overflow: auto;
-    margin: 2%;
+    margin: 1.5%;
     background: #00796B;
 }
 
@@ -204,9 +204,9 @@ input[type='checkbox']:checked.toggle:after {
 
 #media {
 	position: absolute;
-	margin: 2%;
-	height: 65%;
-	width: 100%;
+	margin: 1.5%;
+	height: 60%;
+	width: 97%;
 	background: #00796B;
 	bottom: 0;
 }
