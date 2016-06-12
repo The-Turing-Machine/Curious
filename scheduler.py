@@ -85,7 +85,7 @@ def data_social_medias(hashtag):
 def main():
     twitter.main()
     data_twitter = twitter.dic
-    data.top_tags = [ { 'country':key,'coords': data_twitter[key][0],'tags': data_twitter[key][1:] } for key in data_twitter.keys() ]
+    data.top_tags = [ { 'country':key,'coords': data_twitter[key][0],'tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
 
     for key in data_twitter.keys():
         tags_list = [ tag[0][3:]  for tag in data_twitter[key][1:] ]
