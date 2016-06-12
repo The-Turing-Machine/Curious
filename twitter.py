@@ -33,6 +33,9 @@ CS=["XvalzhATRiMwtRmz5g6jrU4yI9VrMvGRbPYpWaXYtPEofMYyMT","KDTb6Q4swNH1ThMO13SH9v
 # CONSUMER_KEY="9u8p3OjDgDvFjTQQQ5XYQqB8v"
 # CONSUMER_SECRET = "sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"
 
+CONSUMER_KEY="ist8JNh5DRSskF5nlMPUKofql"
+CONSUMER_SECRET = "7Fh0Iw5HZzKo8Z5ohPRv75E9DzxFTergBAggxYRxoge9eskwOK"
+
 CONSUMER_KEY=CK[0]
 CONSUMER_SECRET = CS[0]
 
@@ -62,6 +65,9 @@ OTS = ["8CwjuAi7ctdJQIfW4a835IdLYcap8cl5V2ZPaG0rm7exW","2eAn9kfBofZpuFHuYaakbwbN
 
 # OAUTH_TOKEN =  "4653955494-vi3R1KMecUKtKu27mmqMfAuMwGpYjEcKvXawSfy"
 # OAUTH_TOKEN_SECRET =  "esHifHRZcQgGJPGfgaZmGcjlUd23IbdjuvbdOSko3CJub"
+
+OAUTH_TOKEN =  ""
+OAUTH_TOKEN_SECRET =  ""
 
 
 
@@ -207,7 +213,7 @@ def main():
         print
     else:
         oauth = get_oauth(CONSUMER_KEY,CONSUMER_SECRET,OAUTH_TOKEN,OAUTH_TOKEN_SECRET)
-        get_trend_hashtags(woeid,oauth)
+        # get_trend_hashtags(woeid,oauth)
         # r = requests.get(url="https://api.twitter.com/1.1/search/tweets.json?q=messi&count=100", auth=oauth)
         # a = r.json()
         # print len(a)
