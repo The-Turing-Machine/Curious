@@ -81,7 +81,7 @@ map.on('click', function(e) {
         } else {
             $('#footer').css('height', '10%');
             $('#map').css('opacity', '1');
-            console.log(e);
+            console.log(e); 
         }
     } else {
         console.log('cluster');
