@@ -180,7 +180,7 @@ input[type='checkbox']:checked.toggle:after {
     position: absolute;
     width: 80%;
     height: 10%;
-    background: #E3F2FD;
+    background: #FFFFFF;
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
@@ -200,8 +200,9 @@ input[type='checkbox']:checked.toggle:after {
     color: #111;
 }
 
-#posts div:odd {
-	background: #e22e;
+#media {
+	position: absolute;
+	margin: 2%;
 }
 
 #Call {
