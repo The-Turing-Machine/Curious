@@ -100,7 +100,7 @@ $.get('http://localhost:5000/data', function(response) {
 
 function getCoordinates() {
     console.log(coordinates);
-    return  coordinates ;
+    return coordinates ;
 }
 
 

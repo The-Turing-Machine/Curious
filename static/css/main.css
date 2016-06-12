@@ -180,7 +180,7 @@ input[type='checkbox']:checked.toggle:after {
     position: absolute;
     width: 80%;
     height: 10%;
-    background: #FFFFFF;
+    background: #004D40;
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
@@ -189,9 +189,11 @@ input[type='checkbox']:checked.toggle:after {
 
 #posts {
     position: absolute;
-    height: 20%;
+    height: 25%;
     width: 100%;
     overflow: auto;
+    margin: 2%;
+    background: #00796B;
 }
 
 #posts div {
@@ -203,6 +205,10 @@ input[type='checkbox']:checked.toggle:after {
 #media {
 	position: absolute;
 	margin: 2%;
+	height: 65%;
+	width: 100%;
+	background: #00796B;
+	bottom: 0;
 }
 
 #Call {
