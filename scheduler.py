@@ -80,7 +80,7 @@ def data_social_medias(hashtag):
         except:
             pass
         data.all_social_media_link.append(social_media_dictionary)
-        queue.put_nowait((LanguageIdentification,social_media_dictionary))
+        # queue.put_nowait((LanguageIdentification,social_media_dictionary))
 
     print 'Recieved hashtag - ',hashtag
 

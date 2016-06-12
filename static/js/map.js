@@ -65,7 +65,6 @@ map.on('load', function() {
 
 
 map.on('click', function(e) {
-
     var cluster_features = map.queryRenderedFeatures(e.point, {
         layers: [
             'cluster-0',
@@ -82,6 +81,7 @@ map.on('click', function(e) {
         } else {
             $('#footer').css('height', '10%');
             $('#map').css('opacity', '1');
+            console.log(e);
         }
     } else {
         console.log('cluster');
@@ -116,6 +116,10 @@ $('#Call').on('click', function(e) {
     for (var i = 0; i < data.length; ++i) {
         if (data[i].hashtag == hashtag) {
             $('#posts').append('<div>' + data[i].text + '</div>');
+            if(data[i].photo)
+            {   $('#media').append('<img>' + data[i].photos[2] + '</img>'); }
+            else if (data[i].video) 
+            { $('#media').append('<div>' + data[i].video + '</div>'); }
         }
     }
 });
