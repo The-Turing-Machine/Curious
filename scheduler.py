@@ -2,6 +2,8 @@
 from gevent import monkey
 monkey.patch_all()
 
+import collections
+
 import datetime
 import requests
 import gevent.pool
@@ -86,14 +88,34 @@ def main():
     twitter.main()
     data_twitter = twitter.dic
     # data.top_tags = [ { 'country':key,'coords': data_twitter[key][0],'tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
+    #
+    # data.tags_feature = [  {"type":"Feature",
+    #                         "properties": {'country':key} ,
+    #                         "geometry": {
+    #                                 "type":"point",
+    #                                 "coordinates":[data_twitter[key][0][1],data_twitter[key][0][0]]
+    #                                 }
+    #                         }  for key in data_twitter.keys() ]
 
-    data.tags_feature = [  {"type":"Feature",
-                            "properties": {'country':key} ,
-                            "geometry": {
-                                    "type":"point",
-                                    "coordinates":[data_twitter[key][0][1],data_twitter[key][0][0]]
-                                    }
-                            }  for key in data_twitter.keys() ]
+    lst = []
+    for key in data_twitter.keys():
+        d = collections.OrderedDict()
+        d["type"] = "Feature";
+        d2 = collections.OrderedDict()
+        d2["country"] = key
+        d["properties"] = d2;
+
+        d3 = collections.OrderedDict()
+        d3["type"] = "point"
+        d3["coordinates"] = [data_twitter[key][0][1],data_twitter[key][0][0]]
+
+        d["geometry"] = d3
+        lst.append(d)
+
+    data.tags_feature = lst
+
+
+
 
     data.tags_list =  [ { 'country':key, 'tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
 
