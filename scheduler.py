@@ -3,7 +3,8 @@ from gevent import monkey
 monkey.patch_all()
 
 import collections
-
+import random
+import math
 import datetime
 import requests
 import gevent.pool
@@ -107,7 +108,15 @@ def main():
 
         d3 = collections.OrderedDict()
         d3["type"] = "point"
-        d3["coordinates"] = [data_twitter[key][0][1],data_twitter[key][0][0]]
+
+        r_int = random.randint(1, 360)
+        lat = data_twitter[key][0][1] + math.sin(data_twitter[key][0][1])/2
+
+        r_int = random.randint(1, 360)
+        log = data_twitter[key][0][0] + math.sin(data_twitter[key][0][0]/2
+
+
+        d3["coordinates"] = [lat,log]
 
         d["geometry"] = d3
         lst.append(d)
