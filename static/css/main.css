@@ -1,7 +1,6 @@
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans");
-
 html * {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     -webkit-font-smoothing: antialiased;
@@ -43,7 +42,7 @@ input[type='checkbox'].toggle {
     -moz-border-radius: 13px;
     -webkit-border-radius: 13px;
     border-radius: 13px;
-	box-shadow: none;
+    box-shadow: none;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
@@ -84,39 +83,40 @@ input[type='checkbox']:checked.toggle:after {
 }
 
 .filter span {
-	margin: 8%;
-	padding-right: 12%;
+    margin: 8%;
+    padding-right: 12%;
 }
 
 .filter input {
-	margin-right: 15%;
-	margin-top: 5%;
+    margin-right: 15%;
+    margin-top: 5%;
 }
 
 .a {
-    font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
+    ;
     margin: 5px;
-  display: table;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(to left, #006064, #212121);
-  border-radius: 25px 0px 25px 0px;
-  text-align: center;
+    display: table;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to left, #006064, #212121);
+    border-radius: 25px 0px 25px 0px;
+    text-align: center;
 }
 
 .a span {
-  font-size: 24px;
-  color: #fff;
-  font-weight: 800;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
     display: table-cell;
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 #header {
     position: absolute;
     width: 20%;
     height: 100%;
-    background: linear-gradient(to left, rgba(0, 113, 122, 0.9), rgba(0, 0, 10, 0.8)),url(http://pontosdevista.pt/static/uploads/2015/11/media-wall-1600x700_c.jpg);
+    background: linear-gradient(to left, rgba(0, 113, 122, 0.9), rgba(0, 0, 10, 0.8)), url(http://pontosdevista.pt/static/uploads/2015/11/media-wall-1600x700_c.jpg);
     background-size: cover;
     position: 50% 50%;
     color: #ffffff;
@@ -156,7 +156,6 @@ input[type='checkbox']:checked.toggle:after {
     position: absolute;
     height: 60px;
     width: 60px;
-
 }
 
 #main {
@@ -186,6 +185,80 @@ input[type='checkbox']:checked.toggle:after {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+}
+
+#posts {
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    overflow: auto;
+}
+
+#posts div {
+    position: relative;
+    margin: 2%;
+    color: #111;
+}
+
+#posts div:odd {
+	background: #e22e;
+}
+
+#Call {
+	margin: 10%;
+	margin-top: 1%;
+}
+
+.tag-search {
+    margin: 10%;
+    margin-bottom: 2%;
+    width: 200px;
+    display: block;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px #1abc9c;
+    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+    background-position: -200px 0;
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    color: #0e6252;
+}
+
+input:focus,
+input:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+}
+
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder {
+    color: #1abc9c;
+    font-size: 11px;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    visibility: visible !important;
+}
+
+button {
+    border: none;
+    background: #1abc9c;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px;
+    width: 200px;
+    color: white;
+    margin-left: 25px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .clicked {
