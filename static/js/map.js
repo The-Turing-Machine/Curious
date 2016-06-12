@@ -72,15 +72,12 @@ map.on('click', function(e) {
     if (!cluster_features.length) {
         console.log('point');
         console.log($('#footer').css('height'));
-        if($('#footer').css('height')=='83px')
-        {
-            $('#footer').css('height','90%');
-            $('#map').css('opacity','0.5');
-        }
-        else
-        {
-            $('#footer').css('height','10%');
-            $('#map').css('opacity','1');
+        if ($('#footer').css('height') == '83px') {
+            $('#footer').css('height', '90%');
+            $('#map').css('opacity', '0.5');
+        } else {
+            $('#footer').css('height', '10%');
+            $('#map').css('opacity', '1');
         }
     } else {
         console.log('cluster');
@@ -94,7 +91,15 @@ map.on('click', function(e) {
     }
 });
 
-$.get('http://localhost:5000/data',function(response){
-    console.log(response.data);
+$('#Call').click(function() {
+    var hashtag = $('#hashtag-input').val();
+    var response;
+    $.get('http://localhost:5000/data', function(response) {
+        response = (response.post_data);
+    });
+    for(i=0; i<response.length; ++i){
+        if(response[i].hashtag == hashtag){
+            $('#footer').append('<div id="post">'+ response[i].text +'</div>');
+        }
+    }
 });
-
