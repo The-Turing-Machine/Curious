@@ -18,16 +18,16 @@ class Thread (threading.Thread):
 
 @app.route('/')
 def homepage():
-    thread_main = Thread()
-    thread_main.start()
     return render_template('index.html')
 
 @app.route('/data')
 def send_data():
-    return jsonify({'post_data':data.all_social_media_link,'lang_data':data.all_detected_languages})
+    return jsonify({'post_data':data.all_social_media_link,'tag_data':data.top_tags})
 
     # return str(data.all_social_media_link)
 
 if __name__ == "__main__":
+    thread_main = Thread()
+    thread_main.start()
 	port = int(os.environ.get('PORT', 5000))
 	app.run(debug=True,threaded=True,host='0.0.0.0',port=port)

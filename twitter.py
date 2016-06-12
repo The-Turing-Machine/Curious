@@ -169,9 +169,9 @@ def get_trend_hashtags(woeid,oauth):
                     # print k['query']
                 # print tag[0:10]
                 dic[loc] = tag
-                print dic
+                # print dic
             except Exception as e:
-                pass
+                # pass
                 print "error",e.message
                 # CONSUMER_KEY="9u8p3OjDgDvFjTQQQ5XYQqB8v"
                 # CONSUMER_SECRET = "sy82wTf1VlTiCPtdM2BDOYNGRX9aTzrssi9M0IqeNX1lmUBK2M"
@@ -198,7 +198,8 @@ def get_trend_hashtags(woeid,oauth):
 
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+def main():
     if not OAUTH_TOKEN:
         token, secret = setup_oauth()
         print "OAUTH_TOKEN: " + token

@@ -9,6 +9,7 @@ import gevent.queue
 import gevent
 import json
 import data as data
+import twitter as twitter
 
 session = requests.Session()
 max_workers = 32
@@ -16,7 +17,7 @@ req = 0
 pool = gevent.pool.Pool(max_workers)
 queue = gevent.queue.Queue()
 
-hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub999Degrees','Panama','Giroud','Payet','Burundi','Monday+and+Thursday','BREAKING+NEWS','Chase+Bank','Governor+Nderitu+Gachagua','CS+Joseph+Nkaissery','Kidero','Nigeria','Wenger','Auditor+General','Ramadan','QwetuRoadShow','TourismLiveKE','SiganaFest2016','EURO2016','UhuruInUkambani','QTVJAMROCK','NBAFinals','FaithFriday','TwendeMacha','WBWR','MuhammadAli','NZLvWAL','TransformingCounties','HOTSMS','EbruNewsUpdate','AlbinismKE']
+# hashtags=['RailaInNakuru','AUSvENG','KCBSafariRally','MsetoExtra','GiladOnClub999Degrees','Panama','Giroud','Payet','Burundi','Monday+and+Thursday','BREAKING+NEWS','Chase+Bank','Governor+Nderitu+Gachagua','CS+Joseph+Nkaissery','Kidero','Nigeria','Wenger','Auditor+General','Ramadan','QwetuRoadShow','TourismLiveKE','SiganaFest2016','EURO2016','UhuruInUkambani','QTVJAMROCK','NBAFinals','FaithFriday','TwendeMacha','WBWR','MuhammadAli','NZLvWAL','TransformingCounties','HOTSMS','EbruNewsUpdate','AlbinismKE']
 
 def LanguageIdentification(text_query_full):
     global req
@@ -82,8 +83,28 @@ def data_social_medias(hashtag):
     print 'Recieved hashtag - ',hashtag
 
 def main():
-    for item in hashtags:
-        queue.put_nowait((data_social_medias,item))
+    twitter.main()
+    data_twitter = twitter.dic
+    data.top_tags = [ { 'country':key,'coords': data_twitter[key][0],'tags': data_twitter[key][1:] } for key in data_twitter.keys() ]
+
+    for key in data_twitter.keys():
+        tags_list = [ tag[0][3:]  for tag in data_twitter[key][1:] ]
+        for tag in tags_list:
+            if '%' not in tag:
+                queue.put_nowait((data_social_medias,tag))
+    # print queue.qsize()
+    #
+    # for key in data.keys():
+    #     print key #country
+    #     print data[key][0]  #coords
+    #     print data[key][1:] #list of tags
+
+    #
+    # new_dict = {}
+    # new_dict['country'] =
+
+    # for item in hashtags:
+    #     queue.put_nowait((data_social_medias,item))
 
     while not queue.empty() and not pool.full():
         for x in xrange(0, min(queue.qsize(), pool.free_count())):
