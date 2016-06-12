@@ -22,7 +22,7 @@ def homepage():
 
 @app.route('/data')
 def send_data():
-    return jsonify({'post_data':data.all_social_media_link,'tag_data':data.top_tags})
+    return jsonify({'tags_list':data.tags_list,'tags_feature':data.tags_feature,'post_data':data.all_social_media_link})
 
     # return str(data.all_social_media_link)
 
