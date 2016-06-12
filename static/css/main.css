@@ -180,7 +180,7 @@ input[type='checkbox']:checked.toggle:after {
     position: absolute;
     width: 80%;
     height: 10%;
-    background: #9E9E9E;
+    background: #E3F2FD;
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;

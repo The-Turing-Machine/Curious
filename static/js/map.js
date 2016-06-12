@@ -1,9 +1,9 @@
-var data;
+var data, coordinates;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNoaXNoMzE5NyIsImEiOiJjaW10YzluNWgwMXhkdjlrazVsb3BhdnZ1In0.BzeOLoPxqc8-ottHp7tWAg';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v8',
+    style: 'mapbox://styles/mapbox/bright-v8',
     center: [113.921327, -0.789275],
     zoom: 3,
 });
@@ -11,7 +11,7 @@ map.on('load', function() {
 
     map.addSource("earthquakes", {
         type: "geojson",
-        data: "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
+        data: getCoordinates(),
         cluster: true,
         clusterMaxZoom: 14,
         clusterRadius: 50
@@ -94,18 +94,47 @@ map.on('click', function(e) {
 });
 
 $.get('http://localhost:5000/data', function(response) {
+    coordinates = response["tag_data"];
     data = response["post_data"];
 });
 
+function getCoordinates() {
+
+    return {
+        "features": [{
+                "type": "Feature",
+                "properties": {
+                    "Primary ID": "1.26",
+                    "Secondary ID": "7km NE of Lake Arrowhead, California"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-117.1413333, 34.297]
+                }
+            }, {
+                "type": "Feature",
+                "properties": {
+                    "Primary ID": "1.87",
+                    "Secondary ID": "13km NNE of Pahala, Hawaii"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-155.434494, 19.3199997]
+                }
+            }]
+        }
+}
+
+
 $('#Call').on('click', function(e) {
+    // console.log(data);
     var hashtag = $('.tag-search').val();
     $('#footer').css('height', '90%');
     $('#posts').empty();
     $('#map').css('opacity', '0.5');
     for (var i = 0; i < data.length; ++i) {
         if (data[i].hashtag == hashtag) {
-            $('#posts').append('<div>'+data[i].text+'</div>');
+            $('#posts').append('<div>' + data[i].text + '</div>');
         }
     }
 });
-
