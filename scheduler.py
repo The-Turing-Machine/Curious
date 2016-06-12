@@ -50,16 +50,16 @@ def data_social_medias(hashtag):
     for i in range(0,no_of_posts):
     	social_media_dictionary={}
         social_media_dictionary['post_id']=social_media_data['posts'][i]['post_id']
-        # social_media_dictionary['photos']=social_media_data['posts'][i]['photos'].replace("//","")
 
-        # print social_media_data['posts'][i]['photos']
-        # print social_media_data['posts'][i]['videos']
-    	try:
+        if 'videos' in social_media_data['posts'][i]:
+            l = social_media_data['posts'][i]['videos'][0]
+            social_media_dictionary['videos'] = [ x.replace("//","") for x in [ l['t'],l['p'],l['s'],l['m'] ] ]
+            # print social_media_dictionary['videos']
+        if 'photos' in social_media_data['posts'][i]:
             l = social_media_data['posts'][i]['photos'][0]
             social_media_dictionary['photos'] = [ x.replace("//","") for x in [ l['s'],l['m'],l['l'] ] ]
 
-            l = social_media_data['posts'][i]['videos'][0]
-            social_media_dictionary['videos'] = [ x.replace("//","") for x in [ l['t'],l['p'],l['s'],l['m'] ] ]
+    	try:
 
             social_media_dictionary['text']=social_media_data['posts'][i]['text'].encode('ascii', errors='ignore')
             social_media_dictionary['social_media_network']=social_media_data['posts'][i]['network']
@@ -80,8 +80,6 @@ def data_social_medias(hashtag):
 def main():
     for item in hashtags:
         queue.put_nowait((data_social_medias,item))
-    # pool.join()
-
 
     while not queue.empty() and not pool.full():
         for x in xrange(0, min(queue.qsize(), pool.free_count())):
