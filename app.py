@@ -22,7 +22,7 @@ def homepage():
 
 @app.route('/data')
 def send_data():
-    return jsonify({'tags_list':data.tags_list,'tags_feature':{"type": "FeatureCollection","feature":data.tags_feature},'post_data':data.all_social_media_link})
+    return jsonify({'tags_list':data.tags_list,'tags_feature':{"feature":data.tags_feature,"type": "FeatureCollection"},'post_data':data.all_social_media_link})
 
     # return str(data.all_social_media_link)
 

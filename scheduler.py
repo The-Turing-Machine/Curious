@@ -88,7 +88,7 @@ def main():
     # data.top_tags = [ { 'country':key,'coords': data_twitter[key][0],'tags': [tag[0][3:] for tag in data_twitter[key][1:] if '%' not in tag[0][3:] ]  } for key in data_twitter.keys() ]
 
     data.tags_feature = [  {"type":"Feature",
-                            "properties":key,
+                            "properties": {'country':key} ,
                             "geometry": {
                                     "type":"point",
                                     "coordinates":[data_twitter[key][0][1],data_twitter[key][0][0]]
