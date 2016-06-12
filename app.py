@@ -24,7 +24,7 @@ def homepage():
 
 @app.route('/data')
 def send_data():
-    return jsonify({'data':data.all_social_media_link})
+    return jsonify({'post_data':data.all_social_media_link,'lang_data':data.all_detected_languages})
 
     # return str(data.all_social_media_link)
 

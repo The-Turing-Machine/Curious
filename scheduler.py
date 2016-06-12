@@ -27,16 +27,17 @@ def LanguageIdentification(text_query_full):
     text_query = text_query_full['text']
 
     language_dictionary={}
+    r1=requests.get("https://api.havenondemand.com/1/api/sync/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
+    req+=1
+    api_response=json.loads(r1.text)
+    detected_language=api_response['language']
+    language_dictionary[pid]=detected_language
+    data.all_detected_languages.append(language_dictionary)
     try:
-        r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
-        req+=1
-        api_response=json.loads(r1.text)
-        detected_language=api_response['actions'][0]['result']['language']
-        language_dictionary[pid]=detected_language
-        data.all_detected_languages.append(language_dictionary)
+        pass
     except:
         pass
-    print 'Request recieved for ', pid
+    print 'Request recieved for ', pid, language_dictionary
 
 def data_social_medias(hashtag):
     global req
@@ -51,13 +52,18 @@ def data_social_medias(hashtag):
         social_media_dictionary['post_id']=social_media_data['posts'][i]['post_id']
 
         if 'videos' in social_media_data['posts'][i]:
-            l = social_media_data['posts'][i]['videos'][0]
-            social_media_dictionary['videos'] = [ x.replace("//","") for x in [ l['t'],l['p'],l['s'],l['m'] ] ]
-            # print social_media_dictionary['videos']
+            try:
+                l = social_media_data['posts'][i]['videos'][0]
+                social_media_dictionary['videos'] = [ x.replace("//","") for x in [ l['t'],l['p'],l['s'],l['m'] ] ]
+                # print social_media_dictionary['videos']
+            except:
+                pass
         if 'photos' in social_media_data['posts'][i]:
-            l = social_media_data['posts'][i]['photos'][0]
-            social_media_dictionary['photos'] = [ x.replace("//","") for x in [ l['s'],l['m'],l['l'] ] ]
-
+            try:
+                l = social_media_data['posts'][i]['photos'][0]
+                social_media_dictionary['photos'] = [ x.replace("//","") for x in [ l['s'],l['m'],l['l'] ] ]
+            except:
+                pass
     	try:
 
             social_media_dictionary['text']=social_media_data['posts'][i]['text'].encode('ascii', errors='ignore')
@@ -86,5 +92,5 @@ def main():
             pool.start(pool.spawn(t[0],t[1]))
     pool.join()
 
-# main()
+main()
 # print 'No of Requests : ',req
