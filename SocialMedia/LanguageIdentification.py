@@ -8678,20 +8678,13 @@ def LanguageIdentification(text_query):
         language_dictionary['post_id']=data[i]['post_id']
 
         try:
-            r1=requests.get("https://api.havenondemand.com/1/api/async/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
+            r1=requests.get("https://api.havenondemand.com/1/api/sync/identifylanguage/v1?apikey=22469062-d90b-45bd-94c7-1399b139ba8f&text="+text_query)
 
-            all_post_data=json.loads(r1.text)
+            api_response=json.loads(r1.text)
 
-            job_id=all_post_data['jobID']
-
-            r2=requests.get('https://api.havenondemand.com/1/job/status/'+job_id+'?apikey=22469062-d90b-45bd-94c7-1399b139ba8f')
-
-            api_response=json.loads(r2.text)
-
-            detected_language=api_response['actions'][0]['result']['language']
+            detected_language=api_response['language']
 
             language_dictionary['language']=detected_language
-
 
             all_detected_languages.append(language_dictionary)
 
