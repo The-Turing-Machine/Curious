@@ -90,8 +90,8 @@ def main():
     data.tags_feature = [  {"type":"Feature",
                             "properties": {'country':key} ,
                             "geometry": {
-                                    "type":"point",
-                                    "coordinates":[data_twitter[key][0][1],data_twitter[key][0][0]]
+                                    "coordinates":[data_twitter[key][0][1],data_twitter[key][0][0]],
+                                    "type":"point"
                                     }
                             }  for key in data_twitter.keys() ]
 
