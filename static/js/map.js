@@ -1,4 +1,4 @@
-var data, coordinates;
+var data, coordinates, tags;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXNoaXNoMzE5NyIsImEiOiJjaW10YzluNWgwMXhkdjlrazVsb3BhdnZ1In0.BzeOLoPxqc8-ottHp7tWAg';
 var map = new mapboxgl.Map({
@@ -22,7 +22,7 @@ map.on('load', function() {
         "type": "symbol",
         "source": "earthquakes",
         "layout": {
-            "icon-image": "library-15",
+            "icon-image": "marker-15",
         }
     });
 
@@ -62,6 +62,8 @@ map.on('load', function() {
     });
 });
 
+
+
 map.on('click', function(e) {
 
     var cluster_features = map.queryRenderedFeatures(e.point, {
@@ -96,11 +98,12 @@ map.on('click', function(e) {
 $.get('http://localhost:5000/data', function(response) {
     coordinates = response["tags_feature"];
     data = response["post_data"];
+    tags = response["tags_list"];
 });
 
 function getCoordinates() {
     console.log(coordinates);
-    return coordinates ;
+    return coordinates;
 }
 
 

@@ -203,17 +203,17 @@ input[type='checkbox']:checked.toggle:after {
 }
 
 #media {
-	position: absolute;
-	margin: 1.5%;
-	height: 60%;
-	width: 97%;
-	background: #00796B;
-	bottom: 0;
+    position: absolute;
+    margin: 1.5%;
+    height: 60%;
+    width: 97%;
+    background: #00796B;
+    bottom: 0;
 }
 
 #Call {
-	margin: 10%;
-	margin-top: 1%;
+    margin: 10%;
+    margin-top: 1%;
 }
 
 .tag-search {
