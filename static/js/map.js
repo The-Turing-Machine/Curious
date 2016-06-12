@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXNoaXNoMzE5NyIsImEiOiJjaW10YzluNWgwMXhkdjlra
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v8',
-    center: [-32.51469952959991, 18.890056173909848],
-    zoom: 1,
+    center: [113.921327, -0.789275],
+    zoom: 3,
 });
 map.on('load', function() {
 
@@ -91,15 +91,18 @@ map.on('click', function(e) {
     }
 });
 
-$('#Call').click(function() {
+$('#Call').on('click', function(e) {
     var hashtag = $('#hashtag-input').val();
-    var response;
-    $.get('http://localhost:5000/data', function(response) {
-        response = (response.post_data);
-    });
-    for(i=0; i<response.length; ++i){
-        if(response[i].hashtag == hashtag){
-            $('#footer').append('<div id="post">'+ response[i].text +'</div>');
+    var data;
+    $.get('http://localhost:5000/data', function(response)
+    {
+        //console.log(response["post_data"]);
+        data = response["post_data"];
+        for (var i = 0; i < data.length; ++i) {
+            if (data[i].hashtag == hashtag) {
+                console.log(data[i].text);
+                break;
+            }
         }
-    }
+    });
 });
